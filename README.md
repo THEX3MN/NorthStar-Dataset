@@ -1,67 +1,212 @@
-PROJECT OVERVIEW
+# NorthStar Urban Mobility Data Analytics & NoSQL Database Project
 
-This repository contains the full analytics and database solution for the NorthStar Urban Mobility and Logistics case study. The project investigates operational performance, delivery efficiency, customer satisfaction, and digital platform reliability across multiple UK cities.
+An integrated academic data analytics and database development project based on the **NorthStar Urban Mobility and Logistics** case study. The project investigates operational inefficiencies across transport, delivery, warehouse, customer service, and smart-city mobility operations using Python, SQL in R, R analytics, and MongoDB.
 
-The analysis integrates multiple tools:
+The repository follows the original project workflow used for academic submission, moving from raw data processing to structured SQL analysis, statistical analytics, and NoSQL database development.
 
-Python – for data cleaning, preprocessing, and feature engineering.
+## Project Overview
 
-SQL in R – for structured queries, aggregation, and KPI summarisation.
+NorthStar Urban Mobility and Logistics is a regional organisation operating across multiple UK cities. The organisation manages public shuttle services, last-mile delivery, warehouse dispatch operations, electric vehicle charging hubs, route-planning systems, and a mobile customer platform.
 
-R Analytics – for statistical analysis, grouped summaries, and visualisation.
+The company faces several operational and analytical challenges, including:
 
-MongoDB Atlas – for nested, flexible service-case database design and operational querying.
+* Increasing customer complaints
+* Delayed journeys and missed delivery windows
+* Rising vehicle downtime
+* Inconsistent performance across city zones
+* Fragmented data across multiple internal systems
+* Difficulty connecting customer complaints, journeys, deliveries, driver incidents, and service exceptions
+* Need for a scalable NoSQL solution for flexible and nested operational records
 
-The project identifies operational hotspots, customer satisfaction issues, and resource performance gaps, while providing actionable recommendations based on the findings.
+This project analyses the available data, identifies key operational issues, and designs a MongoDB-based NoSQL structure to support improved service tracking and decision-making.
 
-REPOSITORY STRUCTURE
+## Project Objectives
 
-NorthStar Dataset (Cleaned) - Contains the cleaned CSV datasets used for all analysis.
+The main objectives of this project are to:
 
-NorthStar Dataset (Raw) - Original, unprocessed CSV datasets for reference.
+* Process and clean raw operational datasets
+* Prepare cleaned datasets for further analysis
+* Use SQL within R to query structured operational data
+* Apply R analytics to identify trends, relationships, and service performance patterns
+* Explore operational issues across zones, hubs, customers, deliveries, and service events
+* Design and implement a MongoDB document-based database structure
+* Model nested service case records using MongoDB
+* Demonstrate how structured and semi-structured data can support better operational decision-making
 
-1 - Python Data Processing.ipynb - Notebook for cleaning, validating, and feature engineering the datasets in Python. Creates operational flags, performance indicators, and exploratory charts.
+## Technologies Used
 
-2 - SQL in R.ipynb - Notebook demonstrating SQL queries within R to generate hub, zone, service type, driver, vehicle, and customer performance summaries. Produces reusable KPI tables.
+* Python
+* Pandas
+* R
+* SQL in R
+* MongoDB Atlas
+* PyMongo
+* Google Colab
+* Jupyter Notebooks
+* Data Cleaning
+* Data Analysis
+* Data Visualisation
+* NoSQL Document Modelling
+* CRUD Operations
+* Indexing
 
-3 - R Analytics.ipynb - Notebook performing statistical analysis, grouped summaries, and visualisations. Highlights patterns in operational performance, customer satisfaction, and app-event success/failure.
+## Project Workflow
 
-4 - MongoDB Development.ipynb - Notebook using PyMongo to create and query a MongoDB Atlas database. Implements nested service-case documents integrating complaints, customers, orders, and app events. Demonstrates CRUD operations and indexing.
+### 1. Python Data Processing
 
-KEY FEATURES
+The first notebook focuses on preparing the dataset for analysis. It includes:
 
-Integrated Data Analysis: Combines structured and semi-structured datasets for operational and customer insights.
+* Loading raw datasets
+* Previewing dataset structures
+* Checking missing values
+* Checking duplicate records
+* Validating relationships between datasets
+* Cleaning and preparing data
+* Exporting cleaned datasets
+* Producing selected operational visualisations
 
-Python Processing: Handles cleaning, validation, feature engineering, and exploratory visualisations.
+### 2. SQL in R
 
-SQL in R: Produces management-level KPI tables using joins, filtering, grouping, and aggregation.
+The second notebook applies SQL queries within R to explore structured data. It includes:
 
-R Analytics: Generates descriptive statistics, grouped summaries, correlations, and visualisations to interpret operational and customer patterns.
+* Loading cleaned datasets into R
+* Running SQL queries on operational data
+* Producing table summaries
+* Creating joined operational views
+* Analysing zone-level performance
+* Exploring relationships between customers, orders, deliveries, and service activity
 
-MongoDB Service-Case Design: Implements a flexible, nested document structure for integrated operational case tracking.
+### 3. R Analytics
 
-Optimisation and Reusability: Pre-aggregated tables, reusable feature flags, grouped summaries, and indexed service-case documents improve efficiency and interpretability.
+The third notebook focuses on analytical interpretation and visualisation. It includes:
 
-USAGE INSTRUCTIONS
+* Grouped operational analysis
+* Service performance summaries
+* Zone-based comparisons
+* Correlation analysis
+* Visualisations to support business interpretation
+* Identification of operational patterns and performance issues
 
-1. Clone the repository.
-   
-2. Upload datasets from NorthStar Dataset (Cleaned) to your working environment.
-   
-3. Execute notebooks in order:
-   
-   1 - Python Data Processing.ipynb
-  
-   2 - SQL in R.ipynb
-  
-   3 - R Analytics.ipynb
-  
-   4 - MongoDB Development.ipynb
+### 4. MongoDB Development
 
-4. Ensure all necessary packages/libraries are installed:
-   
-Python: pandas, numpy, matplotlib, seaborn
+The fourth notebook focuses on NoSQL database design and implementation. It includes:
 
-R: tidyverse, dplyr, tibble, sqldf, ggplot2
+* Connecting to MongoDB Atlas
+* Creating MongoDB collections
+* Designing nested document structures
+* Modelling service case records
+* Inserting and querying documents
+* Demonstrating CRUD operations
+* Creating indexes to support query performance
 
-MongoDB: pymongo, MongoDB Atlas connection string
+## Screenshots and Selected Outputs
+
+The screenshots below show selected previews from the project notebooks. Some notebook outputs are long, so only the most relevant visible sections are shown in the README for readability. Full code, outputs, and analysis are available inside the notebook files.
+
+### Python Data Processing
+
+#### Raw Dataset Preview
+
+![Python Raw Dataset Preview](Screenshots/Python%20raw%20dataset%20preview.png)
+
+#### Missing Values Summary
+
+![Python Missing Values Summary](Screenshots/Python%20missing%20values%20summary%20preview.png)
+
+#### Relationship Checks
+
+![Python Relationship Checks](Screenshots/Python%20relationships%20check.png)
+
+#### Cleaned Dataset Summary
+
+![Python Cleaned Dataset Summary](Screenshots/Python%20cleaned%20dataset%20summary.png)
+
+#### Delay Rate by Zone
+
+![Python Delay Rate by Zone](Screenshots/Python%20delay%20rate%20by%20zone.png)
+
+### SQL in R
+
+#### SQL Row Count Preview
+
+![SQL Row Count Preview](Screenshots/SQL%20row%20count%20preview.png)
+
+#### SQL Joined Operational View Preview
+
+![SQL Joined Operational View Preview](Screenshots/SQL%20joined%20operational%20view%20preview.png)
+
+#### SQL Zone Performance Summary
+
+![SQL Zone Performance Summary](Screenshots/SQL%20zone%20performance%20summary.png)
+
+### R Analytics
+
+#### Grouped Analysis Summary
+
+![R Grouped Analysis Summary](Screenshots/R%20grouped%20analysis%20summary%20preview.png)
+
+#### Correlation Analysis Output
+
+![R Correlation Analysis Output](Screenshots/R%20correlation%20analysis%20output%20preview.png)
+
+#### Deliveries by Zone Chart
+
+![R Deliveries by Zone](Screenshots/R%20deliveries%20by%20zone.png)
+
+### MongoDB Development
+
+#### MongoDB Service Case Document
+
+![MongoDB Service Case Document](Screenshots/MongoDB%20service%20case%20document%20output%20preview.png)
+
+## MongoDB Security Note
+
+The MongoDB Atlas connection string has been replaced with a placeholder for security purposes.
+
+To run the MongoDB notebook, users must replace the placeholder connection string with their own MongoDB Atlas connection string:
+
+```python
+client = MongoClient("YOUR_MONGODB_ATLAS_CONNECTION_STRING")
+```
+
+Real database credentials should not be committed to a public GitHub repository.
+
+## Key Skills Demonstrated
+
+This project demonstrates practical experience in:
+
+* Python data processing
+* Data cleaning and preparation
+* Relationship validation across datasets
+* SQL querying and structured data analysis
+* R-based analytics and visualisation
+* Operational performance analysis
+* MongoDB Atlas database development
+* NoSQL document modelling
+* Nested document design
+* CRUD operations
+* Index creation
+* Data-driven business problem analysis
+
+## Learning Outcomes
+
+This project helped strengthen my understanding of:
+
+* Working with fragmented operational datasets
+* Preparing raw data for structured analysis
+* Combining Python, SQL, R, and MongoDB in one analytical workflow
+* Using SQL to explore business operations
+* Applying R analytics to identify trends and relationships
+* Designing NoSQL document structures for complex service records
+* Understanding when document databases are useful for nested and evolving data
+* Supporting business decision-making through integrated data analysis
+
+## Future Improvements
+
+* Add more advanced predictive analysis for service delays and failures
+* Build an interactive dashboard for operational monitoring
+* Expand MongoDB collections for drivers, hubs, vehicles, complaints, and service events
+* Apply more advanced indexing strategies in MongoDB
+* Add automated reporting for key performance indicators
+* Develop a combined dashboard using Python or BI tools
+* Add API-based access to MongoDB service case records
